@@ -13,7 +13,7 @@ public class OVChipkaart {
     @Column(name="kaart_nummer")
     private int kaart_nummer;
     private Date geldig_tot;
-    private String klasse;
+    private int klasse;
     private double saldo;
     @ManyToOne
     @JoinColumn(name="reiziger_id")
@@ -42,11 +42,11 @@ public class OVChipkaart {
         return geldig_tot;
     }
 
-    public void setKlasse(String klasse) {
+    public void setKlasse(int klasse) {
         this.klasse = klasse;
     }
 
-    public String getKlasse() {
+    public int getKlasse() {
         return klasse;
     }
 
